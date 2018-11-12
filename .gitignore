@@ -61,4 +61,4 @@ typings/
 .next
 
 # Ignoring node_modules for separate app
-.node_modules
+note-app/node_modules/
