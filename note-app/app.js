@@ -1,7 +1,7 @@
 const fs = require('fs')
 const _ = require('lodash')
 const yargs = require('yargs')
-const content = require('./content.js')
+const note = require('./note.js')
 
 const command  = process.argv[2]
 const argvYarg = yargs.argv
@@ -11,7 +11,7 @@ console.log("Process: ",process.argv)
 console.log("Yarg: ",argvYarg)
 
 if(_.isEqual(command,"add")){
-    console.log("Adding new note")
+    note.addNote(argvYarg.title,argvYarg.body)
 }else if(_.isEqual(command,"read")){
     console.log("Reading all notes")
 }else if(_.isEqual(command,"list")){
